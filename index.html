@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>¿Qué hacer en caso de un terremoto?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <h1>🌎 ¿Qué hacer en caso de un terremoto?</h1>
+            <p>Selecciona una etapa para conocer las recomendaciones de seguridad.</p>
+        </header>
+
+        <!-- ETAPAS -->
+        <nav class="etapas">
+            <button class="etapa-btn activo" data-etapa="antes">
+                📋 Antes
+            </button>
+
+            <button class="etapa-btn" data-etapa="durante">
+                ⚠️ Durante
+            </button>
+
+            <button class="etapa-btn" data-etapa="despues">
+                ✅ Después
+            </button>
+        </nav>
+
+        <!-- INFORMACIÓN DEL TERREMOTO -->
+        <section id="informacion" class="informacion">
+            <h2 id="titulo-etapa">📋 Antes del terremoto</h2>
+
+            <ul id="recomendaciones"></ul>
+        </section>
+
+        <!-- KIT DE EMERGENCIA -->
+        <section class="kit-section">
+
+            <h2>🧰 Kit de emergencia</h2>
+
+            <p class="subtitulo">
+                Haz clic en cada elemento para conocer su utilidad.
+            </p>
+
+            <div class="kit-grid">
+
+                <button class="kit-card" data-kit="agua">
+                    <span>💧</span>
+                    <strong>Agua</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="alimentos">
+                    <span>🥫</span>
+                    <strong>Alimentos</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="linterna">
+                    <span>🔦</span>
+                    <strong>Linterna</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="pilas">
+                    <span>🔋</span>
+                    <strong>Pilas</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="radio">
+                    <span>📻</span>
+                    <strong>Radio</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="botiquin">
+                    <span>🩹</span>
+                    <strong>Botiquín</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="celular">
+                    <span>📱</span>
+                    <strong>Celular</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="powerbank">
+                    <span>🔌</span>
+                    <strong>Power Bank</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="documentos">
+                    <span>🪪</span>
+                    <strong>Documentos</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="mascarillas">
+                    <span>😷</span>
+                    <strong>Mascarillas</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="guantes">
+                    <span>🧤</span>
+                    <strong>Guantes</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+                <button class="kit-card" data-kit="silbato">
+                    <span>🚨</span>
+                    <strong>Silbato</strong>
+                    <small>Haz clic para conocer su utilidad</small>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- MINI QUIZ -->
+        <section class="quiz">
+
+            <h2>🧠 Mini Quiz</h2>
+
+            <p>¿Qué debes hacer durante un terremoto?</p>
+
+            <button class="respuesta correcta">
+                Protegerte debajo de una mesa resistente
+            </button>
+
+            <button class="respuesta incorrecta">
+                Correr hacia las escaleras
+            </button>
+
+            <div id="resultado"></div>
+
+        </section>
+
+    </main>
+
+    <!-- VENTANA PARA EL KIT -->
+    <div id="modal" class="modal">
+
+        <div class="modal-contenido">
+
+            <button id="cerrar-modal" class="cerrar">
+                ×
+            </button>
+
+            <h2 id="modal-titulo"></h2>
+
+            <p id="modal-texto"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

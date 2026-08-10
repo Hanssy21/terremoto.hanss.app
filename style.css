@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #101d31;
+    color: white;
+    min-height: 100vh;
+}
+
+.app {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 20px 60px;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+/* =========================
+   BOTONES ETAPAS
+========================= */
+
+.etapas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.etapa-btn {
+    border: none;
+    background: #2864d7;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.etapa-btn:hover {
+    transform: translateY(-2px);
+    background: #3475ec;
+}
+
+.etapa-btn.activo {
+    background: #1685df;
+}
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.informacion {
+    background: white;
+    color: #172033;
+    border-radius: 16px;
+    padding: 25px 35px;
+    margin-bottom: 22px;
+    min-height: 150px;
+}
+
+.informacion h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.informacion ul {
+    padding-left: 20px;
+}
+
+.informacion li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* =========================
+   KIT
+========================= */
+
+.kit-section {
+    background: #33445b;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+}
+
+.kit-section h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #d3dce8;
+    margin: 6px 0 20px;
+}
+
+.kit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.kit-card {
+    min-height: 145px;
+    border: none;
+    border-radius: 15px;
+    background: #2c5275;
+    color: white;
+    padding: 18px 12px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.kit-card:hover {
+    transform: translateY(-4px);
+    background: #246b8f;
+}
+
+.kit-card span {
+    font-size: 32px;
+    margin-bottom: 7px;
+}
+
+.kit-card strong {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.kit-card small {
+    font-size: 13px;
+    color: #e0e7ef;
+    text-align: center;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz {
+    background: #33445b;
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+}
+
+.quiz h2 {
+    margin-bottom: 5px;
+}
+
+.quiz p {
+    color: #dbe4ee;
+    margin-bottom: 12px;
+}
+
+.respuesta {
+    display: block;
+    width: 95%;
+    margin: 8px auto;
+    border: none;
+    border-radius: 9px;
+    padding: 11px;
+    background: #1453c4;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.respuesta:hover {
+    background: #1e65df;
+}
+
+#resultado {
+    margin-top: 12px;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.correcto {
+    color: #43d17d;
+}
+
+.incorrecto {
+    color: #ff5353;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal.mostrar {
+    display: flex;
+}
+
+.modal-contenido {
+    background: white;
+    color: #172033;
+
+    width: 100%;
+    max-width: 500px;
+
+    border-radius: 16px;
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.modal-contenido h2 {
+    margin-bottom: 15px;
+}
+
+.modal-contenido p {
+    line-height: 1.6;
+}
+
+.cerrar {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 30px;
+    cursor: pointer;
+
+    color: #333;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .kit-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .etapas {
+        flex-wrap: wrap;
+    }
+
+    .kit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .kit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .informacion {
+        padding: 20px;
+    }
+
+}
